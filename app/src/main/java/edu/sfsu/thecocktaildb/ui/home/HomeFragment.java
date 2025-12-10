@@ -42,18 +42,19 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         HomeViewModel homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
 
+        TextView tv_strDrink = view.findViewById(R.id.text_strDrink);
+
+        homeViewModel.getLiveData().observe(getViewLifecycleOwner(), data-> {
+            tv_strDrink.setText(data.getStrDrink());
+        });
+
+        // Research the following...
         final Observer<CocktailModel> cocktailObserver = new Observer<CocktailModel>() {
             @Override
             public void onChanged(CocktailModel cocktailModels) {
                 Log.i("log", "onChanged" + cocktailModels.getStrDrink());
             }
         };
-
-        TextView tv_strDrink = view.findViewById(R.id.text_strDrink);
-
-        homeViewModel.getLiveData().observe(getViewLifecycleOwner(), data-> {
-            tv_strDrink.setText(data.getStrDrink());
-        });
 
         homeViewModel.getLiveData().observe(getViewLifecycleOwner(), cocktailObserver);
 

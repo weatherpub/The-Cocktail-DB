@@ -18,6 +18,11 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 import edu.sfsu.thecocktaildb.Model.CocktailModel;
+
+/**
+ * Make an HTTP Request and pass the data to LiveData to update the Fragment
+ */
+import edu.sfsu.thecocktaildb.Model.CocktailModel;
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  HomeViewModel
 public class HomeViewModel extends ViewModel {
 
