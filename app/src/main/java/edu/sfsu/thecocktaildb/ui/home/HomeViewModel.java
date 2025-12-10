@@ -89,6 +89,7 @@ public class HomeViewModel extends ViewModel {
         new CocktailAsyncTask().execute(URL);
     }
 
+    // Return a copy of the liveData presumably populated by onPostExecute below.
     public LiveData<CocktailModel> getLiveData() {
         return liveData;
     }

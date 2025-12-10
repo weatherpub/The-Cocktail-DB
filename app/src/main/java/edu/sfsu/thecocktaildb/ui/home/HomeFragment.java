@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -35,7 +34,6 @@ public class HomeFragment extends Fragment {
      *
      * @return
      */
-    MutableLiveData<CocktailModel> liveData;   // HomeViewModel homeViewModel;
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
@@ -48,7 +46,7 @@ public class HomeFragment extends Fragment {
             tv_strDrink.setText(data.getStrDrink());
         });
 
-        // Research the following...
+        // Research the following [ lines 49 - 57 ]
         final Observer<CocktailModel> cocktailObserver = new Observer<CocktailModel>() {
             @Override
             public void onChanged(CocktailModel cocktailModels) {
