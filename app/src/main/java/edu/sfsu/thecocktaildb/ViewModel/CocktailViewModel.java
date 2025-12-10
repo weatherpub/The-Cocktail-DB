@@ -12,13 +12,13 @@ import edu.sfsu.thecocktaildb.Model.CocktailModel;
 public class CocktailViewModel {
 
     // Instantiate an instance of itself.
-    private static final CocktailViewModel obj = new CocktailViewModel();
+    private static final CocktailViewModel cocktailViewModel = new CocktailViewModel();
 
     // Use this method to get an instance of this object.
     private final ArrayList<CocktailModel> model;
 
     public static CocktailViewModel getInstance() {
-        return obj;
+        return cocktailViewModel;
     }
 
     // Constructor is Private...only this class 'CocktailViewModel' can instantiate it.
@@ -37,15 +37,6 @@ public class CocktailViewModel {
         return new MutableLiveData<>();
     }
 }
-
-/*
-From Android Documentation
-Create LiveData objects
-
-LiveData is a wrapper that can be used with any data, including objects that implement Collections, such as List.
-A LiveData object is usually stored with in a viewModel object and is accessed via a getter method, as demonstrated in the following example:
-*/
-
 /**
  * The partner who wants (or needs) sex more is in a subservient position to the partner who satisfies said urges.
  * The one who satisfies sexual urges will be in the driver's seat and will govern the relationship, in the same way that
