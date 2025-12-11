@@ -28,7 +28,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
      */
     public RecyclerViewAdapter() {
         SingletonViewModel singletonViewModel = SingletonViewModel.getInstance();
-        model = singletonViewModel.getData();
+        model = singletonViewModel.getModel();
     }
 
     // Define ViewHolder as in inner class.
