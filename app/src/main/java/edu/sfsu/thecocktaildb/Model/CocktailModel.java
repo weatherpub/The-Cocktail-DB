@@ -1,5 +1,10 @@
 package edu.sfsu.thecocktaildb.Model;
 
+/**
+ * Model
+ * Since we're making an HTTP request, we need a 'data structure'
+ * to model the json that is returned. To do this, we use a Model.
+ */
 public class CocktailModel {
     private int count;
     private final String idDrink;
