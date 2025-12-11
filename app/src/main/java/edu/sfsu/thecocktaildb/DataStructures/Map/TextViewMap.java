@@ -1,12 +1,12 @@
-package edu.sfsu.thecocktaildb.DataStructures.Heap;
+package edu.sfsu.thecocktaildb.DataStructures.Map;
 
 import java.util.HashMap;
 
-public class UrlHeap {
+public class TextViewMap {
     private HashMap<String, String> url = new HashMap<>();
     private String value;
 
-    public UrlHeap(String value) {
+    public TextViewMap(String value) {
         this.value = value;
     }
 
