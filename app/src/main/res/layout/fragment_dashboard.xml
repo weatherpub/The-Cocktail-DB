@@ -1,22 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.dashboard.DashboardFragment">
-
-    <TextView
-        android:id="@+id/text_dashboard"
+    android:scrollbars="vertical">
+    <ImageView android:id="@+id/iv_artistThumb" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_idArtist" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strArtist" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strBiographyEN" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <!--
+    <TextView android:id="@+id/tv_strArtistStripped" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strArtistAlternate" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_idLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_intFormedYear" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_intBornYear" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strDisbanded" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strStyle" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strGenre" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strMood" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strWebsite" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strFacebook" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strTwitter" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strBiographyEN" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strBiographyDE" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strBiographyFR" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strBiographyCN" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strBiographyIT" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strBiographyJP" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strBiographyRU" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strBiographyES" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strBiographyPT" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strBiographySE" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strBiographyNL" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strBiographyHU" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strBiographyNO" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strBiographyIL" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strBiographyPL" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strGender" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_intMembers" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strCountry" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strCountryCode" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strArtistThumb" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strArtistLogo" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strArtistCutout" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strArtistClearart" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strArtistWideThumb" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strArtistFanart" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strArtistFanart2" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strArtistFanart3" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strArtistFanart4" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strArtistBanner" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strMusicBrainzID" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strISNIcode" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strLastFMChart" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_intCharted" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/tv_strLocked" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <Button android:id="@+id/btn_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/btn_button" />
+    -->
+</LinearLayout>
+    <!--
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent"
+        tools:context=".ui.dashboard.DashboardFragment">
+
+        <TextView
+            android:id="@+id/text_dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    -->
+    <!-- 183 loc -->

@@ -2,7 +2,6 @@ package edu.sfsu.thecocktaildb.ui.home;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,17 +9,12 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 import edu.sfsu.thecocktaildb.Adapter.RecyclerViewAdapter;
-import edu.sfsu.thecocktaildb.Model.CocktailModel;
 import edu.sfsu.thecocktaildb.R;
 import edu.sfsu.thecocktaildb.databinding.FragmentHomeBinding;
 
@@ -40,28 +34,32 @@ public class HomeFragment extends Fragment {
      * @return
      */
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
         HomeViewModel homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
 
-        TextView tv_strDrink = view.findViewById(R.id.text_strDrink);
+        binding = FragmentHomeBinding.inflate(inflater, container, false);
+
+        View view = binding.getRoot();
+
+        // TextView tv_IdDrink = view.findViewById(R.id.tv_IdDrink);
+        // TextView tv_strDrink = view.findViewById(R.id.text_strDrink);
 
         homeViewModel.getLiveData().observe(getViewLifecycleOwner(), data-> {
-            tv_strDrink.setText(data.getStrDrink());
+            // tv_IdDrink.setText(data.getStrDrink());
+            // tv_IdDrink.setText(data.getIdDrink());
             binding.rvHomeFragment.setAdapter(new RecyclerViewAdapter());
             binding.rvHomeFragment.setLayoutManager(new LinearLayoutManager(getActivity()));
         });
 
-        // Research the following [ lines 49 - 57 ]
+        /*
         final Observer<CocktailModel> cocktailObserver = new Observer<CocktailModel>() {
             @Override
             public void onChanged(CocktailModel cocktailModels) {
-                Log.i("log", "onChanged" + cocktailModels.getStrDrink());
+                Log.i("log", "Observer > onChanged(CocktailModel cocktailModels): " + cocktailModels.getStrDrink());
             }
         };
 
         homeViewModel.getLiveData().observe(getViewLifecycleOwner(), cocktailObserver);
+        */
 
         return view;
     }

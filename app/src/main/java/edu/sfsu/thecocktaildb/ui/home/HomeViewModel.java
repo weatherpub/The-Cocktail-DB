@@ -26,6 +26,8 @@ import edu.sfsu.thecocktaildb.Model.CocktailModel;
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *  HomeViewModel
 public class HomeViewModel extends ViewModel {
 
+    // Usually MutableLiveData<>() is used in the ViewModel,
+    // and then the ViewModel only exposes immutable LiveData objects to observers.
     private MutableLiveData<CocktailModel> liveData;
 
     private static final String URL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita";

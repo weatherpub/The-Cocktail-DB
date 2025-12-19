@@ -19,7 +19,7 @@ public class SingletonViewModel {
         model = new ArrayList<>();
     }
 
-    public ArrayList<CocktailModel> getData() {
+    public ArrayList<CocktailModel> getModel() {
         return model;
     }
 
