@@ -83,11 +83,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         View itemView = vh.itemView;
         ArtistModel item = model.get(position);
 
+        Picasso.get().load(Uri.parse(item.getStrArtistThumb())).into(vh.artistThumb);
         vh.idArtist.setText(String.format("%s", item.getIdArtist()));
         vh.strArtist.setText(String.format("%s", item.getStrArtist()));
         //vh.artistThumb.setImageURI();
         // Picasso.get().load(Uri.parse(item.getStrArtistThumb())).resize(200, 150).centerCrop().transform(new RoundedTransformation(10, 0)).into(vh.artistThumb);
-        Picasso.get().load(Uri.parse(item.getStrArtistThumb())).into(vh.artistThumb);
 
         itemView.setOnClickListener(new View.OnClickListener() {
 

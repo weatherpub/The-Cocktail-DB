@@ -39,6 +39,13 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
+// Written By Patrick Kevin Mims [ 12.19.25 ]
+
+/**
+ * NotificationsFragment displays a RecyclerView
+ * It runs another thread to write the results and read the results
+ * all in a new thread - WriteReadJSON.
+ */
 public class NotificationsFragment extends Fragment {
 
     private FragmentNotificationsBinding binding;
@@ -54,19 +61,21 @@ public class NotificationsFragment extends Fragment {
 
         binding = FragmentNotificationsBinding.inflate(inflater, container, false);
 
-//        View root = binding.getRoot();
         View view = inflater.inflate(R.layout.fragment_notifications, container, false);
 
-        // TextView textView = root.findViewById(R.id.text_notifications);
+        // this may not show, because of RecyclerView.
         TextView textView = view.findViewById(R.id.text_notifications);
         vm.getText().observe(getViewLifecycleOwner(), textView::setText);
 
+        // fetch json
         new AsyncTaskCategory().execute(URL);
 
+        // define recyclerview
         recyclerView = view.findViewById(R.id.id_recycler_view);
 
-        NotificationsViewModel notificationViewModel = new ViewModelProvider(this).get(NotificationsViewModel.class);
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
+        // I may need this for an array of objects
+        // NotificationsViewModel notificationViewModel = new ViewModelProvider(this).get(NotificationsViewModel.class);
+        // binding = FragmentNotificationsBinding.inflate(inflater, container, false);
 
         return view;
     }
