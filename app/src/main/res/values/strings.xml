@@ -3,7 +3,13 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <!-- New -->
+    <!-- Home -->
     <string name="card_message">Message</string>
     <string name="tv_idDrink">idDrink</string>
+    <!-- Dashboard -->
+    <string name="tv_idArtist">Id</string>
+    <string name="tv_strArtist">Artist</string>
+    <string name="btn_button">Dashboard Button</string>
+
+    <string name="content_description">ImageView for ThumbNails</string>
 </resources>

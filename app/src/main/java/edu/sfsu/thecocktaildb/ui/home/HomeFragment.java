@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -15,7 +14,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import org.jetbrains.annotations.NotNull;
 
 import edu.sfsu.thecocktaildb.Adapter.RecyclerViewAdapter;
-import edu.sfsu.thecocktaildb.R;
 import edu.sfsu.thecocktaildb.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
@@ -46,8 +44,8 @@ public class HomeFragment extends Fragment {
         homeViewModel.getLiveData().observe(getViewLifecycleOwner(), data-> {
             // tv_IdDrink.setText(data.getStrDrink());
             // tv_IdDrink.setText(data.getIdDrink());
-            binding.rvHomeFragment.setAdapter(new RecyclerViewAdapter());
-            binding.rvHomeFragment.setLayoutManager(new LinearLayoutManager(getActivity()));
+            //binding.rvHomeFragment.setAdapter(new RecyclerViewAdapter(model));
+            //binding.rvHomeFragment.setLayoutManager(new LinearLayoutManager(getActivity()));
         });
 
         /*

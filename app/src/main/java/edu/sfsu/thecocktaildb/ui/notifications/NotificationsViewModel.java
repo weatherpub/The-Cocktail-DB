@@ -10,7 +10,7 @@ public class NotificationsViewModel extends ViewModel {
 
     public NotificationsViewModel() {
         model = new MutableLiveData<>();
-        model.setValue("I only sleep with white women");
+        model.setValue("White Women");
     }
 
     public LiveData<String> getText() {
